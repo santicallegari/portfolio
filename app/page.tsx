@@ -231,7 +231,6 @@ export default function Portfolio() {
   const [lang, setLang] = useState<'en' | 'es'>('en');
   const t = DATA[lang];
 
-  // Handle Dark Mode toggle on HTML element
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -246,9 +245,9 @@ export default function Portfolio() {
       {/* --- NAVBAR --- */}
       <nav className={`sticky top-0 z-50 backdrop-blur-lg border-b ${darkMode ? 'bg-slate-900/80 border-slate-800' : 'bg-white/80 border-slate-200'}`}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
-          <div className="font-bold text-lg tracking-tight flex items-center gap-2">
-            <Terminal className="text-blue-500" size={20} />
-            <span>Santiago<span className="text-blue-500">.dev</span></span>
+          <div className="font-bold text-xl tracking-tight flex items-center gap-2">
+            <Terminal className="text-blue-500" size={24} />
+            <span>Santiago Callegari</span>
           </div>
           
           <div className="flex items-center gap-4">
@@ -288,7 +287,7 @@ export default function Portfolio() {
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
               Santiago <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
-                Ferreyra
+                Callegari
               </span>
             </h1>
             
@@ -427,7 +426,7 @@ export default function Portfolio() {
       {/* --- FOOTER --- */}
       <footer className={`py-12 mt-20 border-t ${darkMode ? 'bg-slate-900 border-slate-800 text-slate-500' : 'bg-slate-50 border-slate-200 text-slate-500'}`}>
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p>© {new Date().getFullYear()} Santiago Ferreyra Callegari.</p>
+          <p>© {new Date().getFullYear()} Santiago Callegari.</p>
           <p className="text-sm mt-2">{t.footer}</p>
         </div>
       </footer>
